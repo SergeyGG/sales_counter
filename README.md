@@ -1,7 +1,7 @@
 # Sales counter
 Sales management app
 ![Sales counter screenshot](screenshot/screenshot.png)
-## Install instructions for ubuntu 16.04
+## Install instructions for Ubuntu 16.04
 ```{r, engine='bash', count_lines}
 git clone https://github.com/singleton11/sales_counter.git
 cd public
