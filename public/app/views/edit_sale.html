@@ -1,0 +1,42 @@
+<br/><a class="btn btn-default" href="#/">Back</a>&nbsp;
+<button class="btn btn-primary" ng-click="saveGood()">Save</button>
+<br/><br/>
+<div class="alert alert-success" role="alert" ng-show="succ">Sale successfuly saved</div>
+<div class="alert alert-danger" role="alert" ng-show="err">Error</div>
+<h3>Sale</h3>
+<table class="table">
+    <tr>
+        <td>Title</td>
+        <td><input type="text" class="form-control" ng-model="sale.title"></td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td><input type="text" class="form-control" ng-model="sale.number"></td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td><input id="date" type="text" class="form-control" ng-model="sale.date" placeholder="dd.mm.yyyy"></td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td>{{ sale.goods | count }}</td>
+    </tr>
+</table>
+<h3>Goods</h3>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Quantity</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="good in sale.goods">
+        <td><input type="text" class="form-control" ng-model="good.name"></td>
+        <td><input type="text" class="form-control" ng-model="good.cost"></td>
+        <td><input type="text" class="form-control" ng-model="good.quantity"></td>
+        <td>
+            <button class="btn btn-danger" ng-click="removeGood($index)">Remove</button>
+        </td>
+    </tr>
+</table>
+<button class="btn btn-success" ng-click="createGood()">New</button>

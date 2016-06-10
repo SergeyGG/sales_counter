@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="salesCounter">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales counter</title>
+    <link rel="stylesheet" href="public/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <ng-view></ng-view>
+</div>
+<script type="text/javascript" src="public/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="public/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="public/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="public/app/main.js"></script>
+</body>
+</html>

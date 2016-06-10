@@ -1,0 +1,33 @@
+<br/><a class="btn btn-default" href="#/">Back</a> <br/><br/>
+<h3>Sale</h3>
+<table class="table">
+    <tr>
+        <td>Title</td>
+        <td>{{ sale.title }}</td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>{{ sale.number }}</td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td>{{ sale.date['$date'] | date: 'dd.MM.yyyy' }}</td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td>{{ sale.goods | count }}</td>
+    </tr>
+</table>
+<h3>Goods</h3>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Quantity</th>
+    </tr>
+    <tr ng-repeat="good in sale.goods">
+        <td>{{ good.name }}</td>
+        <td>{{ good.cost }}</td>
+        <td>{{ good.quantity }}</td>
+    </tr>
+</table>

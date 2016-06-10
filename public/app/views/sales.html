@@ -1,0 +1,24 @@
+<br/>
+<div class="alert alert-success" role="alert" ng-show="succ">Sale successfuly removed</div>
+<div class="alert alert-danger" role="alert" ng-show="err">Error</div>
+<h3>Sales</h3>
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Number</th>
+        <th>Date</th>
+        <th>Total</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="sale in sales">
+        <td><a href="#/sale/{{ sale._id['$oid'] }}">{{ sale.title }}</a></td>
+        <td>{{ sale.number }}</td>
+        <td>{{ sale.date['$date'] | date: 'dd.MM.yyyy' }}</td>
+        <td>{{ sale.goods | count }}</td>
+        <td>
+            <a class="btn btn-primary" href="#/sale/edit/{{ sale._id['$oid'] }}">Edit</a>
+            <button class="btn btn-danger" ng-click="deleteSale($index)">Remove</button>
+        </td>
+    </tr>
+</table>
+<a class="btn btn-success" href="#/sale/new">New</a>
