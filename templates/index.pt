@@ -11,7 +11,6 @@
 </div>
 <script type="text/javascript" src="public/node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="public/node_modules/angular-route/angular-route.min.js"></script>
-<script type="text/javascript" src="public/node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="public/app/main.js"></script>
 </body>
 </html>
