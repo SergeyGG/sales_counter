@@ -39,6 +39,11 @@ app.controller('SalesController', ['$scope', '$http', function ($scope, $http) {
     $http.get('/sales').then(function (response) {
         console.log(response.data.sales);
         $scope.sales = response.data.sales;
+        $scope.total = $scope.sales.reduce(function (previousValue, currentItem) {
+            return previousValue + currentItem.goods.reduce(function (previousValue, currentItem) {
+                    return previousValue + currentItem.cost * currentItem.quantity;
+                }, 0);
+        }, 0);
     });
 }]);
 

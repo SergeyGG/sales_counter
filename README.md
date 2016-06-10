@@ -11,4 +11,4 @@ pip3 install -r requirenments.txt
 apt install mongodb-server
 ```
 
-[Live demo](http://songleton.com:8080/)
+[Live demo](http://sales.songleton.com/)
